@@ -20,7 +20,7 @@ Note:
     
 Returns:
     circle_img - Image with the Circles drawn
-    circles - List of circles in format (rho,theta,x1,y1,x2,y2)
+    circles.txt - List of circles in format (x,y,r,votes)
 
 """
 
@@ -78,8 +78,9 @@ def find_hough_circles(image, edge_image, r_min, r_max, delta_r, num_thetas, bin
   # Output list of detected circles. A single circle would be a tuple of (x,y,r,threshold) 
   out_circles = []
   
-  for k, votes in sorted(accumulator.items(), key=lambda i: -i[1]):
-    x, y, r = k
+  # Sort the accumulator based on the votes for the candidate circles 
+  for candidate_circle, votes in sorted(accumulator.items(), key=lambda i: -i[1]):
+    x, y, r = candidate_circle
     current_vote_percentage = votes / num_thetas
     if current_vote_percentage >= bin_threshold: 
       # Shortlist the circle for final result
