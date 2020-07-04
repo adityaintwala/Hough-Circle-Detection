@@ -4,7 +4,7 @@ This is based on paper [Use of the Hough Transformation To Detect Lines and Curv
 This is an extension of the Hough Transform to detect circles using the equation,\
 &nbsp; &nbsp; &nbsp; &nbsp; r^2 = ( x - a )^2 + ( y - b )^2 &nbsp; &nbsp; &nbsp; &nbsp; in parameter space rho = ( a, b, r) 
 
-Please refer to [Hough Line Detection] (https://github.com/adityaintwala/Hough-Line-Detection#hough-line-detection) python implementation at the following git repository for more information.
+Please refer to [Hough Line Detection](https://github.com/adityaintwala/Hough-Line-Detection#hough-line-detection) python implementation at the following git repository for more information.
 
 ## Usage
 ''' python find_hough_circles.py ./images/ex1.png --r_min 10 --r_max 200 --delta_r 1 --num_thetas 100 --bin_threshold 0.4 --min_edge_threshold 100 --max_edge_threshold 200 '''
