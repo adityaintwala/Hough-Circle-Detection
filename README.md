@@ -26,11 +26,11 @@ The output of the script would be two files:
 * circle_img.png - Image with the Circles drawn in Green color.
 
 ## Samples
-Sample Input Image  |  Sample Output Image
-:------------------:|:--------------------:
-![Sample Input Image](/images/ex1.png)  |  ![Sample Output Image](/images/output_ex1.png)
-![Sample Input Image](/images/ex2.png)  |  ![Sample Output Image](/images/output_ex2.png)
-![Sample Input Image](/images/ex3.png)  |  ![Sample Output Image](/images/output_ex3.png)
-![Sample Input Image](/images/standard.png)  |  ![Sample Output Image](/images/output_standard.png)
+Sample Input Image  |  Sample Output Image  |  Post-Processed Output Image
+:------------------:|:--------------------:|:--------------------:
+![Sample Input Image](/images/ex1.png)  |  ![Sample Output Image](/images/output_ex1.png)  |  ![Post-processed Output Image](/images/output_ex1_pp.png)
+![Sample Input Image](/images/ex2.png)  |  ![Sample Output Image](/images/output_ex2.png)  |  ![Post-processed Output Image](/images/output_ex2_pp.png)
+![Sample Input Image](/images/ex3.png)  |  ![Sample Output Image](/images/output_ex3.png)  |  ![Post-processed Output Image](/images/output_ex3_pp.png)
+![Sample Input Image](/images/standard.png)  |  ![Sample Output Image](/images/output_standard.png)  |  ![Post-processed Output Image](/images/output_standard_pp.png)
 
 
