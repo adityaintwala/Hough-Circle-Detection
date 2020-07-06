@@ -1,0 +1,2 @@
+x ,	 y,	 Radius,	 Threshold 
+180 , 196 , 149 , 0.47
