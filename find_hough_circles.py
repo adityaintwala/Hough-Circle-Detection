@@ -31,7 +31,7 @@ import math
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
-def find_hough_circles(image, edge_image, r_min, r_max, delta_r, num_thetas, bin_threshold):
+def find_hough_circles(image, edge_image, r_min, r_max, delta_r, num_thetas, bin_threshold, post_process = True):
   #image size
   img_height, img_width = edge_image.shape[:2]
   
@@ -86,6 +86,20 @@ def find_hough_circles(image, edge_image, r_min, r_max, delta_r, num_thetas, bin
       # Shortlist the circle for final result
       out_circles.append((x, y, r, current_vote_percentage))
       print(x, y, r, current_vote_percentage)
+      
+  
+  # Post process the results, can add more post processing later.
+  if post_process :
+    pixel_threshold = 5
+    postprocess_circles = []
+    for x, y, r, v in out_circles:
+      # Exclude circles that are too close of each other
+      # all((x - xc) ** 2 + (y - yc) ** 2 > rc ** 2 for xc, yc, rc, v in postprocess_circles)
+      # Remove nearby duplicate circles based on pixel_threshold
+      if all(abs(x - xc) > pixel_threshold or abs(y - yc) > pixel_threshold or abs(r - rc) > pixel_threshold for xc, yc, rc, v in postprocess_circles):
+        postprocess_circles.append((x, y, r, v))
+    out_circles = postprocess_circles
+  
     
   # Draw shortlisted circles on the output image
   for x, y, r, v in out_circles:
